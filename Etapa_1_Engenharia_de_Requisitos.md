@@ -1623,3 +1623,349 @@ Transformar esses casos de uso em um modelo de diagrama de casos de uso UML (tex
 Montar um template de documento de especificação (SRS) já com seções preenchidas para você colar no Confluence ou no Word.
 
 Qual desses te ajuda mais agora?
+
+### **Rastreabilidade inicial**
+
+#### “Vincule requisitos às histórias de usuário correspondentes.”
+
+Vou fazer o vínculo em dois níveis:
+
+Requisitos funcionais principais → Tarefas “macro” do KAN (KAN-1, KAN-3, KAN-4, KAN-5, KAN-6)
+
+Requisitos mais específicos → Subtasks que você já criou (KAN-2, KAN-7, KAN-13 a KAN-23)
+
+Assim você tem rastreabilidade clara entre requisito → história de usuário (já definidas) → item do Jira.
+
+URL do projeto / lista de issues:
+
+Minha equipe | Lista
+
+Lista completa em: 
+
+18 Issues
+
+1\. Arquitetura / UI Geral
+
+Requisito R1 – Definir arquitetura do sistema web de reservas
+
+História de usuário (já criada):
+
+Como arquiteto de software, eu quero definir a arquitetura da aplicação (camadas, módulos e integrações), para que o sistema seja escalável, fácil de manter e permita evolução futura dos módulos de quartos, hóspedes e reservas.
+
+Vincular a:
+
+KAN-1 – Arquitetura/UI (Tarefa macro)
+
+KAN-1: Arquitetura/UI
+
+A fazer
+
+KAN-2 – Definir arquitetura do sistema de reservas (web) (Subtask)
+
+KAN-2: Definir arquitetura do sistema de reservas (web)
+
+A fazer
+
+Sugestão de uso no Jira:
+
+Colocar o texto da história de usuário na descrição de KAN-2.
+
+Usar KAN-1 como guarda-chuva para demais histórias de UI que criarmos.
+
+Requisito R2 – Ter um layout principal com menu lateral e área de conteúdo
+
+História:
+
+Como usuário do sistema (recepcionista/gerente), eu quero um layout principal com menu lateral e área de conteúdo bem organizada, para que eu encontre rapidamente as funcionalidades de quartos, hóspedes e reservas sem me perder na interface.
+
+Vincular a:
+
+KAN-1 – Arquitetura/UI (Tarefa macro)
+
+Requisito R3 – Definir guideline visual e paleta de cores
+
+História implícita:
+
+Como usuário do sistema, eu quero uma identidade visual consistente (cores, fontes, componentes), para que eu tenha uma experiência agradável e reconhecível ao usar o sistema.
+
+Vincular a:
+
+KAN-1 – Arquitetura/UI
+
+KAN-7 – Definir guideline visual (UI) e paleta de cores (verde/azul)
+
+KAN-7: Definir guideline visual (UI) e paleta de cores (verde/azul)
+
+A fazer
+
+Aqui, KAN-7 é praticamente a história/hospitalidade de design. Você pode só ajustar o resumo se quiser seguir o formato “Como… eu quero…”.
+
+2\. Gestão de Quartos
+
+Requisito R4 – Manter cadastro de quartos (dados básicos)
+
+História principal:
+
+Como administrador do hotel, eu quero cadastrar e editar quartos com informações como número, tipo, capacidade, status e diária, para que eu mantenha um inventário atualizado e confiável dos quartos disponíveis.
+
+Vincular a:
+
+KAN-3 – Gestão de Quartos (Tarefa macro)
+
+KAN-3: Gestão de Quartos
+
+A fazer
+
+KAN-13 – Implementar modelo de dados de Quartos e Camas
+
+KAN-13: Implementar modelo de dados de Quartos e Camas 
+
+A fazer
+
+KAN-14 – Tela de cadastro/edição de Quartos
+
+KAN-14: Tela de cadastro/edição de Quartos
+
+A fazer
+
+Sugestão:
+
+Descrição de KAN-13 → foca no requisito de dados (campos, relacionamentos).
+
+Descrição de KAN-14 → coloca a história de usuário de cadastro/edição de quarto \+ critérios Given-When-Then.
+
+Requisito R5 – Listar quartos com filtros de status
+
+História:
+
+Como recepcionista, eu quero visualizar uma lista de quartos com filtros por status (livre, ocupado, reservado, manutenção), para que eu identifique rapidamente quais quartos posso alocar para novos hóspedes.
+
+Vincular a:
+
+KAN-3 – Gestão de Quartos
+
+KAN-15 – Tela de listagem de Quartos
+
+KAN-15: Tela de listagem de Quartos
+
+A fazer
+
+Requisito R6 – Ver detalhes de um quarto
+
+História:
+
+Como recepcionista, eu quero abrir a tela de detalhes de um quarto com todas as informações relevantes, para que eu possa tomar decisões informadas ao atribuí-lo a um hóspede.
+
+Vincular a:
+
+KAN-3 – Gestão de Quartos
+
+KAN-14 – Tela de cadastro/edição de Quartos (usando uma aba ou seção de detalhes)
+
+3\. Gestão de Hóspedes
+
+Requisito R7 – Cadastrar e editar hóspedes
+
+História:
+
+Como recepcionista, eu quero cadastrar hóspedes com dados pessoais (nome, documento, contato, endereço), para que o hotel mantenha um registro organizado para check-in, cobrança e obrigações legais.
+
+Vincular a:
+
+KAN-4 – Gestão de Hóspedes (Tarefa macro)
+
+KAN-4: Gestão de Hóspedes
+
+A fazer
+
+KAN-16 – Implementar modelo de dados de Hóspede
+
+KAN-16: Implementar modelo de dados de Hóspede
+
+A fazer
+
+KAN-17 – Tela de cadastro/edição de Hóspede
+
+KAN-17: Tela de cadastro/edição de Hóspede
+
+A fazer
+
+Requisito R8 – Listar e buscar hóspedes
+
+Histórias:
+
+Como recepcionista, eu quero editar dados de hóspedes e consultar rapidamente o histórico pelo nome ou documento…
+
+Como recepcionista, eu quero buscar hóspedes por nome, documento ou telefone…
+
+Vincular a:
+
+KAN-4 – Gestão de Hóspedes
+
+KAN-18 – Tela de listagem de Hóspedes
+
+KAN-18: Tela de listagem de Hóspedes
+
+A fazer
+
+Na descrição de KAN-18, você pode incluir:
+
+História de busca (nome/documento/telefone).
+
+Critérios Given-When-Then de lista \+ filtro/pesquisa.
+
+4\. Gestão de Reservas
+
+Requisito R9 – Modelo de dados de Reserva
+
+História implícita:
+
+Como desenvolvedor/PO, eu quero um modelo de dados de reserva com hóspede, quarto, datas e status, para que o sistema consiga registrar e consultar reservas de forma consistente.
+
+Vincular a:
+
+KAN-5 – Gestão de Reservas (Tarefa macro)
+
+KAN-5: Gestão de Reservas
+
+A fazer
+
+KAN-19 – Implementar modelo de dados de Reserva e regras básicas
+
+KAN-19: Implementar modelo de dados de Reserva e regras básicas
+
+A fazer
+
+Requisito R10 – Tela de criação/edição de Reserva
+
+Histórias:
+
+Como recepcionista, eu quero criar reservas informando hóspede, datas, quarto (ou tipo) e número de pessoas…
+
+Como recepcionista, eu quero editar dados de reservas (datas, quarto, hóspede) e cancelar reservas quando necessário…
+
+Vincular a:
+
+KAN-5 – Gestão de Reservas
+
+KAN-21 – Tela de criação/edição de Reserva
+
+KAN-21: Tela de criação/edição de Reserva
+
+A fazer
+
+Requisito R11 – Listagem de Quartos voltada para Reservas
+
+História:
+
+Como recepcionista, eu quero visualizar a disponibilidade de quartos para realizar reservas.
+
+Vincular a:
+
+KAN-5 – Gestão de Reservas
+
+KAN-20 – Tela de listagem de Quartos para Gestão de Reservas
+
+KAN-20: Tela de listagem de Quartos para Gestão de Reservas
+
+A fazer
+
+Requisito R12 – Tela principal de Gestão de Reservas
+
+História (lista de reservas):
+
+Como equipe de recepção, eu quero visualizar uma lista de reservas com filtros por data, status e hóspede…
+
+Vincular a:
+
+KAN-5 – Gestão de Reservas
+
+KAN-21 – Tela de criação/edição de Reserva (pode incorporar navegação de lista \+ formulário)
+
+Se depois você criar uma issue “Lista de Reservas”, ela também será ligada a esse requisito.
+
+Requisito R13 – Verificar disponibilidade
+
+História:
+
+Como recepcionista, eu quero verificar automaticamente a disponibilidade de quartos para um período informado, para que eu evite conflitos de reservas e overbooking.
+
+Vincular a:
+
+KAN-5 – Gestão de Reservas
+
+KAN-19 – Implementar modelo de dados de Reserva e regras básicas (onde entram as regras de conflito/overbooking)
+
+5\. Integração, Navegação e UX Geral
+
+Requisito R14 – Navegar facilmente entre módulos (Quartos, Hóspedes, Reservas)
+
+História:
+
+Como recepcionista, eu quero navegar facilmente entre Quartos, Hóspedes e Reservas a partir de um menu consistente, para que eu reduza o tempo gasto trocando de tela durante o atendimento.
+
+Vincular a:
+
+KAN-6 – Integração, Navegação e UX Geral (Tarefa macro)
+
+KAN-6: Integração, Navegação e UX Geral
+
+A fazer
+
+KAN-22 – Implementar navegação entre módulos
+
+KAN-22: Implementar navegação entre módulos
+
+A fazer
+
+Requisito R15 – Melhorias de UX e feedback ao usuário
+
+Histórias:
+
+Como usuário do sistema, eu quero ver mensagens claras de sucesso ou erro…
+
+Como usuário, eu quero ser avisado quando algum campo obrigatório estiver faltando ou inválido…
+
+Como usuário, eu quero filtros e ordenação intuitivos nas listas…
+
+Vincular a:
+
+KAN-6 – Integração, Navegação e UX Geral
+
+KAN-23 – Melhorias de UX e feedback ao usuário
+
+KAN-23: Melhorias de UX e feedback ao usuário
+
+A fazer
+
+Requisito R16 – Integração entre telas (usar dados de hóspedes/quartos em reservas)
+
+História implícita:
+
+Como recepcionista, eu quero que, ao criar uma reserva, eu consiga buscar hóspedes e escolher quartos já cadastrados, para não precisar digitar tudo do zero.
+
+Vincular a:
+
+KAN-6 – Integração, Navegação e UX Geral
+
+KAN-19 – Modelo de dados de Reserva (lado de backend)
+
+KAN-20 / KAN-21 / KAN-18 / KAN-15 (lado de UI reutilizada / seleção de dados)
+
+6\. Como registrar esses vínculos no Jira
+
+Como você não tem tipo de issue “Requisito” ainda, uma forma prática de garantir rastreabilidade é:
+
+Criar uma página de requisitos (por exemplo, no Confluence) ou um documento simples e numerar: R1, R2, R3…
+
+Em cada issue do Jira (KAN-1, KAN-3, KAN-4, KAN-5, KAN-6, KAN-13… KAN-23), adicionar na descrição ou em um campo customizado algo como:
+
+Requisitos atendidos: R3, R4, R5
+
+Opcional: criar um rótulo/label por requisito (ex.: req-R4-quartos-cadastro) e aplicar nas issues relacionadas.
+
+Se você quiser, no próximo passo posso te devolver uma tabelinha em formato CSV:
+
+com colunas Requisito;IssueKey;IssueResumo,
+
+pronta para você importar ou usar como base de documentação de rastreabilidade. Quer que eu gere esse CSV?
