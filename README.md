@@ -1,1 +1,0 @@
-# AI4ES_avaliacao_AtlassianIntelligence
